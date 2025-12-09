@@ -1,18 +1,109 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Driver</title>
-<link rel='stylesheet' href='styles.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0; padding: 0; font-family: 'Arial', sans-serif;
+            background-color: #333;
+            display: flex; justify-content: center; align-items: center; height: 100vh;
+        }
+
+        .phone-screen {
+            width: 440px; height: 956px;
+            background-color: white;
+            border-radius: 55px; overflow: hidden; position: relative;
+            border: 8px solid #1a1a1a;
+            display: flex; flex-direction: column;
+        }
+
+        /* HEADER */
+        .header {
+            padding: 30px 20px 20px;
+            display: flex; align-items: center;
+        }
+        .back-btn { font-size: 24px; color: #333; margin-right: 20px; text-decoration: none; }
+        .page-title { font-size: 20px; font-weight: bold; }
+
+        /* DRIVER IMAGE AREA */
+        .driver-image-container {
+            width: 100%;
+            height: 350px;
+            background-color: #f0f0f0;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        /* Placeholder image - You can replace src with a real photo */
+        .driver-img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* DRIVER DETAILS */
+        .info-card {
+            padding: 0 30px;
+        }
+
+        .driver-name { font-size: 28px; font-weight: bold; color: #333; margin-bottom: 5px; }
+        .rating { color: #F4B400; font-size: 16px; margin-bottom: 20px; }
+
+        .detail-row {
+            display: flex; margin-bottom: 15px; align-items: center;
+            font-size: 16px; color: #555;
+        }
+        .detail-label { width: 120px; font-weight: bold; color: #af094b; } /* SheGO Pink Labels */
+
+        /* CONFIRM BUTTON */
+        .bottom-action {
+            margin-top: auto; padding: 30px;
+        }
+        .confirm-btn {
+            background-color: #af094b; color: white;
+            width: 100%; padding: 20px; border-radius: 35px;
+            text-align: center; font-weight: bold; font-size: 18px;
+            text-decoration: none; display: block;
+            box-shadow: 0 10px 20px rgba(175,9,75,0.3);
+        }
+    </style>
 </head>
 <body>
-<div class='screen'>
-    <div class='section-title'>Select Driver</div>
 
-    <div class='card'>Driver 1 — Myvi</div>
-    <div class='card'>Driver 2 — Honda City</div>
+    <div class="phone-screen">
+        <div class="header">
+            <a href="ride-options.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            <div class="page-title">Confirm Your SheGO Driver</div>
+        </div>
 
-    <a class='btn' href='trip-ongoing.html'>Confirm Driver</a>
-</div>
+        <div class="driver-image-container">
+            <img src="https://img.freepik.com/free-photo/asian-woman-smiling-portrait_23-2148965824.jpg" class="driver-img" alt="Driver Photo">
+        </div>
+
+        <div class="info-card">
+            <div class="driver-name">Liu Mei Xuan</div>
+            <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+
+            <div class="detail-row">
+                <span class="detail-label">Age:</span> 30 Years Old
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Gender:</span> Female
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Type of Car:</span> Honda City
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Car Plate:</span> WQP 8891
+            </div>
+        </div>
+
+        <div class="bottom-action">
+            <a href="trip-ongoing.html" class="confirm-btn">Confirm & Book</a>
+        </div>
+    </div>
+
 </body>
 </html>
