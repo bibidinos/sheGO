@@ -1,19 +1,116 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Ride Options</title>
-<link rel='stylesheet' href='styles.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Ride</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0; padding: 0; font-family: 'Arial', sans-serif;
+            background-color: #333;
+            display: flex; justify-content: center; align-items: center; height: 100vh;
+        }
+
+        .phone-screen {
+            width: 440px; height: 956px;
+            background-color: #f9f9f9;
+            border-radius: 55px; overflow: hidden; position: relative;
+            border: 8px solid #1a1a1a;
+        }
+
+        /* HEADER */
+        .header {
+            padding: 30px 20px 10px;
+            background: white;
+            display: flex; align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .back-btn { font-size: 24px; color: #333; margin-right: 20px; text-decoration: none; }
+        .page-title { font-size: 20px; font-weight: bold; }
+
+        /* RIDE LIST */
+        .ride-list { padding: 20px; overflow-y: auto; height: 750px; }
+
+        .ride-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            border: 1px solid #eee;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .ride-card:hover { border-color: #af094b; box-shadow: 0 5px 15px rgba(175,9,75,0.1); }
+
+        .car-icon { width: 80px; height: 50px; background: #eee; border-radius: 10px; margin-right: 15px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #888;}
+        
+        .ride-details { flex: 1; }
+        .ride-name { font-weight: bold; font-size: 18px; color: #af094b; margin-bottom: 5px; }
+        .ride-capacity { font-size: 14px; color: #666; display: flex; align-items: center; gap: 5px; }
+        .ride-price { font-weight: bold; font-size: 18px; color: #333; }
+
+        /* CONFIRM BUTTON */
+        .confirm-btn-container {
+            position: absolute; bottom: 30px; left: 20px; right: 20px;
+        }
+        .confirm-btn {
+            background-color: #af094b; color: white;
+            width: 100%; padding: 20px; border-radius: 30px;
+            text-align: center; font-weight: bold; font-size: 18px;
+            text-decoration: none; display: block;
+        }
+    </style>
 </head>
 <body>
-<div class='screen'>
-    <div class='section-title'>Select Your Ride</div>
 
-    <div class='card'>Bronze • Max 4 Passengers</div>
-    <div class='card'>Gold • Max 6 Passengers</div>
-    <div class='card'>Titanium • Max 4 Passengers</div>
+    <div class="phone-screen">
+        <div class="header">
+            <a href="home.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            <div class="page-title">Select Your Ride</div>
+        </div>
 
-    <a class='btn' href='driver-info.html'>Choose Driver</a>
-</div>
+        <div class="ride-list">
+            <div class="ride-card">
+                <div class="car-icon"><i class="fas fa-car-side fa-2x"></i></div>
+                <div class="ride-details">
+                    <div class="ride-name">Bronze</div>
+                    <div class="ride-capacity"><i class="fas fa-user"></i> Max 4</div>
+                    <div style="font-size:12px; color:#999;">Bezza, Axia & Others</div>
+                </div>
+                <div class="ride-price">RM 14.00</div>
+            </div>
+
+            <div class="ride-card" style="border: 2px solid #af094b; background-color: #fff0f5;">
+                <div class="car-icon"><i class="fas fa-car fa-2x" style="color:#af094b;"></i></div>
+                <div class="ride-details">
+                    <div class="ride-name">Gold</div>
+                    <div class="ride-capacity"><i class="fas fa-user"></i> Max 6</div>
+                    <div style="font-size:12px; color:#999;">Alza, Aruz & Others</div>
+                </div>
+                <div class="ride-price">RM 22.00</div>
+            </div>
+
+            <div class="ride-card">
+                <div class="car-icon"><i class="fas fa-car-alt fa-2x"></i></div>
+                <div class="ride-details">
+                    <div class="ride-name">Titanium</div>
+                    <div class="ride-capacity"><i class="fas fa-user"></i> Max 4</div>
+                    <div style="font-size:12px; color:#999;">BMW, Audi & Others</div>
+                </div>
+                <div class="ride-price">RM 40.00</div>
+            </div>
+        </div>
+
+        <div class="confirm-btn-container">
+            <a href="driver-info.html" class="confirm-btn">Confirm Ride</a>
+        </div>
+
+    </div>
+
 </body>
 </html>
